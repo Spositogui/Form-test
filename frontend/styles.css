@@ -1,0 +1,270 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rebeccapurple;
+  color: #071723;
+}
+
+.box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  width: 550px;
+}
+
+.header {
+  background: url(images/header.png) center right no-repeat;
+  background-size: cover;
+  height: 187px;
+  padding: 23px 36px;
+  width: 100%;
+}
+
+.title {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.46;
+}
+
+#last-line-header{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/*Formulario*/
+.fieldset {
+  float: left;
+  width: 100%;
+  margin-top: 32px; 
+  padding: 0 32px;
+  position: relative;
+}
+
+.fieldset label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Quais Stickers Section */
+.container-label {
+  font-size: 14px!important;
+  font-weight: normal!important;
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.container-label input[type=checkbox] {
+  visibility: hidden;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  background-color: #2F3676;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+#reacts.submitted, 
+#vue.submitted,
+#angular.submitted {
+  background-color: #F59393;
+  border: 1px solid #F33232;
+}
+
+.checkmark:hover {
+  background-color: #191847;
+}
+
+.checkmark::before {
+  content: "";
+  width: 4px; 
+  height: 9px; 
+  left: 8px; 
+  bottom: 7px;
+  border: solid white; 
+  border-width: 0 3px 3px 0; 
+  transform: rotate(45deg); 
+  position: absolute;
+  display: none;
+}
+
+.container-label input:checked ~ .checkmark::before {
+  display: block;
+}
+
+/* Quant Stickers section */
+.counter {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.quant-buttons {
+  border: none;
+  width: 42px;
+  height: 42px;
+}
+
+.quant-buttons svg {
+  fill: #2f3676;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+}
+
+.quant-buttons:hover svg {
+  fill: #191847;
+  width: 42px;
+  height: 42px;
+}
+
+.btn-disabled svg {
+  cursor: not-allowed;
+  fill: #C5CFD6!important;
+}
+
+#total-stickers {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 8px;
+  width: 60px;
+  height: 42px;
+  text-align: center;
+}
+
+#total-stickers.submitted {
+  background-color: #F59393;
+  border-color: #F33232;
+}
+
+
+ .quant-input input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quant-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*Observações section*/
+.form textarea {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 8px;
+  color: #071723;
+  height: 140px;
+  padding: 16px;
+  resize: none;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 100px;
+  padding: 32px;
+  background: #dde3e9;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+
+#submit-sucefull {
+  color: #00C57C;
+  margin-right: 93px;
+  margin-top: 10px;
+  display: none;
+}
+
+#submit-sucefull.sucefull {display: block;}
+
+#btn-submit {
+  appearance: none;
+  background-color: #2f3676;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 32px;
+  border: 2px solid #2f3676;
+}
+
+#btn-submit:focus,
+#btn-submit:hover {
+  border: 2px solid #2f3676;
+  background: #191847;
+}
+
+#btn-submit.btn-disabled {
+  background-color: #C5CFD6;
+  border-color: #555555;
+  color: #555555;
+  cursor: not-allowed;
+}
+
+@media(max-width: 570px) {
+ 
+  .box {
+   width: 450px;
+ }
+
+ .footer {
+   padding: 5px 32px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+ }
+
+ #btn-submit {
+   width: 140px;
+   height: 50px;
+ }
+
+ #submit-sucefull {
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+  font-size: 18px;
+ }
+
+}

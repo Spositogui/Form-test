@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Teste Frontend VAGAS.com</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	
+	<main class="box">
+
+		<header class="header">
+			<p class="title">Formulário</p>
+			<p class="title">para compra de</p>
+			<p class="title" id="last-line-header">Pacote de Stickers</p>
+		</header>
+		
+		<form class="form" id="form">
+			
+			<section class="fieldset">
+				<label>Quais stickers:</label>
+				<label class="container-label">
+					<input type="checkbox">
+					<span id="reacts"class="checkmark" tabindex="0"></span>
+					Reacts
+				</label>
+				<label class="container-label">
+					<input type="checkbox">
+					<span id="vue" class="checkmark" tabindex="0"></span>
+					Vue
+				</label>
+				<label class="container-label">
+					<input type="checkbox">
+					<span id="angular" class="checkmark" tabindex="0"></span>
+					Angular
+				</label>
+			</section>
+			
+			<section class="fieldset">
+				
+				<label>Quantos stickers de cada?</label>
+				<div class="counter">
+					
+					<button type="button" class="quant-buttons btn-disabled" id="btn-minus">
+						<svg xmlns="http://www.w3.org/2000/svg" >
+							<path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
+						</svg>
+					</button>
+					
+					<div id="quant-input">
+						<input id="total-stickers" type="number" value="0"  min="1" aria-required="true">
+					</div>
+
+					<button type="button" class="quant-buttons" id="btn-plus">
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
+						</svg>
+					</button>
+				
+				</div>
+			
+			</section>
+			
+			<section class="fieldset">
+				<label>Observações:</label>
+				<textarea name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
+			</section>
+			
+			<footer class="footer">
+				<span id="submit-sucefull">Formulário enviado com sucesso!</span>
+				<button class="btn-disabled" id="btn-submit" type="button">Enviar</button>
+			</footer>
+		</form>
+
+	</main>
+
+	<script src="index.js"></script>
+</body>
+
+</html>
